@@ -1,0 +1,79 @@
+autoUpdate:
+  enabled: false
+  schedule: ""
+bootConfigURL: https://github.com/warunekmd/environment-docker-desktop-dev
+cluster:
+  clusterName: docker-desktop
+  devEnvApprovers:
+  - warunekmd
+  environmentGitOwner: warunekmd
+  gitKind: github
+  gitName: github
+  gitServer: https://github.com
+  namespace: kube-system
+  provider: kubernetes
+  registry: docker.io
+environments:
+- ingress:
+    domain: 192.168.65.3
+    externalDNS: false
+    namespaceSubDomain: -kube-system.
+    tls:
+      email: mwarunek@nexient.com
+      enabled: false
+      production: false
+  key: dev
+  repository: environment-docker-desktop-dev
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: mwarunek@nexient.com
+      enabled: false
+      production: false
+  key: staging
+  repository: environment-docker-desktop-staging
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: mwarunek@nexient.com
+      enabled: false
+      production: false
+  key: production
+  repository: environment-docker-desktop-production
+gitops: true
+ingress:
+  domain: 192.168.65.3
+  externalDNS: false
+  namespaceSubDomain: -kube-system.
+  tls:
+    email: mwarunek@nexient.com
+    enabled: false
+    production: false
+kaniko: true
+repository: nexus
+secretStorage: local
+storage:
+  backup:
+    enabled: false
+    url: ""
+  logs:
+    enabled: false
+    url: ""
+  reports:
+    enabled: false
+    url: ""
+  repository:
+    enabled: false
+    url: ""
+vault: {}
+velero:
+  schedule: ""
+  ttl: ""
+versionStream:
+  ref: v1.0.608
+  url: https://github.com/jenkins-x/jenkins-x-versions.git
+webhook: lighthouse
