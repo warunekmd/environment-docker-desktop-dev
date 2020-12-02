@@ -1,15 +1,15 @@
 autoUpdate:
   enabled: false
   schedule: ""
-bootConfigURL: https://github.com/warunekmd/environment-docker-desktop-dev
+bootConfigURL: https://repo.corp.nexient.com/mwarunek/environment-docker-desktop-dev
 cluster:
   clusterName: docker-desktop
   devEnvApprovers:
-  - warunekmd
-  environmentGitOwner: warunekmd
-  gitKind: github
-  gitName: github
-  gitServer: https://github.com/
+  - mwarunek
+  environmentGitOwner: mwarunek
+  gitKind: gitlab
+  gitName: gitlab
+  gitServer: https://repo.corp.nexient.com
   namespace: kube-system
   provider: kubernetes
   registry: docker.io
