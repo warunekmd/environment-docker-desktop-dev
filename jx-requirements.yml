@@ -9,7 +9,7 @@ cluster:
   environmentGitOwner: warunekmd
   gitKind: github
   gitName: github
-  gitServer: https://github.com
+  gitServer: https://github.com/
   namespace: kube-system
   provider: kubernetes
   registry: docker.io

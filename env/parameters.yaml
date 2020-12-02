@@ -1,0 +1,15 @@
+adminUser:
+  password: local:docker-desktop/adminUser:password
+  username: warunekmd
+docker:
+  email: mwarunek@nexient.com
+  password: local:docker-desktop/docker:password
+  url: https://index.docker.io/v1/
+  username: mwarunek
+enableDocker: true
+pipelineUser:
+  email: mwarunek@nexient.com
+  token: local:docker-desktop/pipelineUser:token
+  username: warunekmd
+prow:
+  hmacToken: local:docker-desktop/prow:hmacToken

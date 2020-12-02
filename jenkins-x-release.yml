@@ -4,7 +4,7 @@ pipelineConfig:
     release:
       pipeline:
         agent:
-          image: gcr.io/jenkinsxio/builder-jx
+          image: gcr.io/jenkinsxio/kaniko/executor@sha256:213315ef79b28581b631cdaa6645abdd73fb475a00b1ce71e8a8fcc42397406e
         stages:
           - name: release
             steps:

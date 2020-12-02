@@ -9,6 +9,8 @@ pipelineConfig:
         - name: pr-checks
           options:
             containerOptions:
+              name: ""
+              resources: {}
               volumeMounts:
               - mountPath: /builder/home/.jx/localSecrets/currentCluster
                 name: local-secrets
@@ -39,11 +41,13 @@ pipelineConfig:
           image: gcr.io/jenkinsxio/kaniko/executor@sha256:213315ef79b28581b631cdaa6645abdd73fb475a00b1ce71e8a8fcc42397406e
         environment:
         - name: DEPLOY_NAMESPACE
-          value: jx
+          value: kube-system
         stages:
         - name: release
           options:
             containerOptions:
+              name: ""
+              resources: {}
               volumeMounts:
               - mountPath: /builder/home/.jx/localSecrets/currentCluster
                 name: local-secrets
